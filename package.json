@@ -1,0 +1,22 @@
+{
+  "name": "starter-api-javascript",
+  "version": "0.0.1-alpha",
+  "description": "Express starter in a modular structure.",
+  "main": "src/server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "keywords": [
+    "starter",
+    "express",
+    "javascript",
+    "api",
+    "backend"
+  ],
+  "author": "Dimas Syauqi <Github: @syauqqii>",
+  "license": "MIT"
+}
