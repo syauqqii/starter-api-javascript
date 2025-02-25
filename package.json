@@ -1,6 +1,6 @@
 {
   "name": "starter-api-javascript",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "description": "Express starter in a modular structure.",
   "main": "src/server.js",
   "directories": {
@@ -18,5 +18,9 @@
     "backend"
   ],
   "author": "Dimas Syauqi <Github: @syauqqii>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "crypto-js": "^4.2.0"
+  }
 }
