@@ -38,6 +38,10 @@ Copy `.env.example` to `.env`
 ```sh
 cp .env.example .env
 ```
+Don't forget to change these variable values:
+- `ACCESS_TOKEN_JWT_SECRET`
+- `REFRESH_TOKEN_JWT_SECRET`
+- `ENCRYPT_KEY`
 
 ### 3️⃣ Run the application
 ```sh
