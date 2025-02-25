@@ -9,8 +9,12 @@
 - AES encryption & decryption utility (`encryption_util.js`)
 - HTTP status utility (`http_status_util.js`)
 - API response documentation added to `README.md`
-- Created `app.js` with a basic Express server and route (`/`)  
+- Created `app.js` with a basic Express server and route (`/`)
 - Created `server.js` to initialize and start the server
+- Implemented `ResponseUtil` in `app.js`
+- Created `HelloWorldController` to manage responses separately
+- Added `hello_world_route.js` to modularize routing
+- Introduced `SetupNotFoundHandler()` (`app.js`) to return 404 responses
 
 ### Changed
 - N/A
