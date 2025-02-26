@@ -1,6 +1,7 @@
 const express = require('express');
 const { ResponseUtil } = require("./utils");
 
+const database = require("../database");
 const routes = require("./routes");
 
 class App {
@@ -27,8 +28,12 @@ class App {
         });
     }
 
-    ConnectDatabase() {
-
+    async ConnectDatabase() {
+        try {
+            await database.sync();
+        } catch(error) {
+            console.error(`\n  [ERROR] Connecting to the database: ${error.message}`);
+        }
     }
 
     GetServer() {

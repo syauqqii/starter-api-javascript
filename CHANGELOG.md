@@ -1,9 +1,9 @@
 # Changelog
 
-## [0.0.2-alpha] - 2025-02-25
+## [0.0.2-alpha] - 2025-02-26
 ### Added
 - Standardized response handling (`response_utils.js`)
-- Installed dependencies: `bcrypt`, `crypto-js`, `dotenv`, `express`
+- Installed dependencies: `bcrypt`, `crypto-js`, `dotenv`, `express`, `mysql2`, `sequelize`
 - Added environment variable: `ENCRYPT_KEY` & `APP_HOST` (stored in `.env.example`)
 - Password comparison utility (`password_util.js`)
 - AES encryption & decryption utility (`encryption_util.js`)
@@ -15,6 +15,9 @@
 - Created `HelloWorldController` to manage responses separately
 - Added `hello_world_route.js` to modularize routing
 - Introduced `SetupNotFoundHandler()` (`app.js`) to return 404 responses
+- Add database connection `database/index.js`
+- Implement `ConnectDatabase()` function in `server.js` for automatic DB sync
+- Add error handling for database connection
 
 ### Changed
 - N/A
