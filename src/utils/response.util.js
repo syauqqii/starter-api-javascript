@@ -1,4 +1,4 @@
-const HttpStatus = require("./http_status_util");
+const HttpStatus = require("./http_status.util");
 
 class ResponseUtil {
     /**
@@ -21,6 +21,13 @@ class ResponseUtil {
      */
     static Created(DATA = null, MESSAGE = "Resource successfully created") {
         return this.SuccessResponse(DATA, MESSAGE, HttpStatus.CREATED);
+    }
+
+    /**
+     * ✅ Request was accepted for processing, but not completed
+     */
+    static Accepted(DATA = null, MESSAGE = "Request has been accepted") {
+        return this.SuccessResponse(DATA, MESSAGE, HttpStatus.ACCEPTED);
     }
 
     /**
@@ -113,6 +120,13 @@ class ResponseUtil {
     static InternalServerError(MESSAGE = "Internal Server Error") {
         return this.ErrorResponse(MESSAGE, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    /**
+     * ⚠️ 503 - Service Unavailable (e.g., maintenance)
+     */
+    static ServiceUnavailable(MESSAGE = "Service is temporarily unavailable") {
+        return this.ErrorResponse(MESSAGE, HttpStatus.SERVICE_UNAVAILABLE);
+    }
 }
 
-module.exports = ResponseUtil;
+module.exports = { HttpStatus, ResponseUtil };

@@ -52,16 +52,21 @@ npm start
 ### 🔨 HTTP Status Codes
 ```
 {
+  -- Success Responses --
   "200": "OK - The request was successful.",
   "201": "Created - The resource was successfully created.",
   "202": "Accepted - The request has been accepted for processing but is not completed.",
   "204": "No Content - The request was successful, but there is no content to return.",
+
+  -- Client Errors --
   "400": "Bad Request - The request could not be understood due to invalid syntax.",
   "401": "Unauthorized - Authentication is required and has failed or has not been provided.",
   "403": "Forbidden - The client does not have access rights to the content.",
   "404": "Not Found - The server could not find the requested resource.",
   "409": "Conflict - The request conflicts with the current state of the resource.",
   "422": "Unprocessable Entity - The request was well-formed but contained invalid data.",
+
+  -- Server Errors --
   "500": "Internal Server Error - A generic error message when the server fails to process the request.",
   "503": "Service Unavailable - The server is not ready to handle the request.",
 }
