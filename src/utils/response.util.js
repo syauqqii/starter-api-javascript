@@ -17,6 +17,13 @@ class ResponseUtil {
     }
 
     /**
+     * ✅ Success response with 200 OK
+     */
+    static Ok(DATA = null, MESSAGE = "Success") {
+        return this.SuccessResponse(DATA, MESSAGE, HttpStatus.OK);
+    }
+
+    /**
      * ✅ Resource created successfully
      */
     static Created(DATA = null, MESSAGE = "Resource successfully created") {
@@ -112,6 +119,13 @@ class ResponseUtil {
      */
     static UnprocessableEntity(MESSAGE = "Validation failed, please check your input") {
         return this.ErrorResponse(MESSAGE, HttpStatus.UNPROCESSABLE_ENTITY);
+    }
+
+    /**
+     * ❌ 429 - Too Many Requests (Rate limit exceeded)
+     */
+    static TooManyRequests(MESSAGE = "Too many requests, please try again later") {
+        return this.ErrorResponse(MESSAGE, HttpStatus.TOO_MANY_REQUESTS);
     }
 
     /**
