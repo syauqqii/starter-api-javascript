@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const HelloWorldRoute = require("./hello_world.route");
+const HealthRoute = require("./health.route");
 
-router.use(HelloWorldRoute);
+router.use(HealthRoute);
 
 module.exports = router;
